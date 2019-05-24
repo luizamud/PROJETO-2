@@ -1,0 +1,408 @@
+@font-face {
+    font-family: 'Opensans-Regular';
+    font-weight: normal;
+    font-style: normal;
+    src: url('fonts/OpenSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Opensans-Regular-Light';
+    font-weight: normal;
+    font-style: normal;
+    src: url('fonts/OpenSans-Light.ttf');
+}
+
+body {
+    display: inline;
+    max-width: 1920px;
+    margin: 0;
+    background-image: url('/images/type-cinza.png');
+    background-repeat: repeat;
+}
+
+.logo-background {
+    height: 215px;
+    background-image: url('/images/Banner-do-site-Novel-Mania.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 1920px;
+}
+
+.logo {
+    position: relative;
+    top: 16.1%;
+    width: 400px;
+    height: 145px;
+    margin: 0 auto;
+    background-image: url('/images/Logotipo-1-Site-Novel-Mania.png');
+    background-repeat: no-repeat;
+}
+
+.menu {
+    position: relative;
+    float: left;
+    width: 100%;
+    max-width: 1920px;
+    height: 50px;
+    background-color: #222;
+    top: -18px;
+    list-style-type: none;
+}
+
+ul {
+    width: 100%;
+    margin-top: 13px;
+    padding-left: 0;
+    text-align: center;
+}
+
+li {
+    font-family: 'Opensans-Regular', sans-serif;
+    font-size: 15px;
+    display: inline;
+    margin: 0 auto;
+    padding-left: 20px;
+    color: white;
+}
+
+.item1, .item6, .item8 {
+    padding-right: 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.icon {
+    position: relative;
+    top: 2px;
+    left: 4px;
+    padding-right: 20px;
+    padding-left: 10px;
+    background-image: url('/images/seta.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 38%;
+}
+
+img {
+    width: 14px;
+    height: 14px;
+}
+
+.container {
+    max-width: 1250px;
+    height: 660px;
+    margin: 0 auto;
+    padding-top: 52px;
+    ;
+}
+
+.box1 {
+    float: left;
+    width: 70.5%;
+    height: 660px;
+    margin-left: 25px;
+    background-color: white;
+}
+
+.box2 {
+    display: block;
+    float: left;
+    width: 24%;
+    height: 594px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    background-color: white;
+}
+
+.box3 {
+    position: relative;
+    top:30px;
+    font-family: 'Opensans-Regular', sans-serif;
+    font-size: 20px;
+    width: 100%;
+    height: 45px;
+    margin-top: 20px;
+    color: black;
+    background-color: white;
+}
+
+.titulo {
+    font-family: 'Opensans-Regular-Light', sans-serif;
+    font-size: 30px;
+    color: #1e73be;
+}
+
+.subtitulo {
+    font-family: 'Opensans-Regular', sans-serif;
+    font-size: 14.45px;
+    margin-top: 7px;
+    margin-bottom: 34px;
+    color: #888;
+}
+
+.imagem {
+    max-width: 1920px;
+    height: 419px;
+    margin-bottom: 36px;
+    background-image: url('/images/Social_Post_-PFF.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.padding {
+    padding: 37px 40px 0 40px;
+}
+
+.rodape {
+    font-family: 'Opensans-Regular-Light', sans-serif;
+    font-size: 34px;
+    font-weight: normal;
+    width: 100%;
+    text-align: center;
+    color: #3a3a3a;
+}
+
+.padding-2 {
+    padding: 10px;
+}
+
+.saudacao {
+    font-family: 'Opensans-Regular', sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 320;
+    color: #3a3a3a;
+}
+
+.gif {
+    max-width: 1920px;
+    height: 369px;
+    background-image: url('/images/Banner-de-doação-Gif-Novel-Mania.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.border {
+    width: 100%;
+    height: 1px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.discord {
+    max-width: 1920px;
+    height: 63px;
+    background-image: url('/images/Discord-Logo-Wordmark-Color-1-1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 180px;
+}
+
+.a {
+    width: 100%;
+    height: 4px;
+}
+
+.logomobile {
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 1024px) {
+    .box1 {
+        margin-left: 0;
+        width: 73%;
+    }
+    .box2 {
+        width: 25%;
+    }
+}
+
+@media (max-width: 768px) {
+    .lista {
+        display: none;
+    }
+    .box2, .box3 {
+        display: none;
+    }
+    .box1 {
+        width: 100%;
+        margin: 0;
+    }
+    .menumobile {
+        background-image: url('/images/menu-bars.png');
+        background-repeat: no-repeat;
+        background-position: left;
+        width: 14px;
+        height: 15px;
+        margin-left: 22px;
+        margin-top: 17px;
+        margin-right: 0;
+        margin-bottom: 0;
+        padding-top: 2px;
+        float: left;
+    }
+    .submenu {
+        width: 100%;
+        height: 50px;
+        background-color: #222;
+    }
+    .menumobiletext {
+        position: relative;
+        float: left;
+        top: -3px;
+        color: white;
+        font-family: 'Opensans-Regular', sans-serif;
+        font-size: 15px;
+        text-align: center;
+        margin-left: 27px;
+    }
+    .padding {
+        padding: 320;
+    }
+    .imagem {
+        max-width: 768px;
+        position: relative;
+        background-size: 100%;
+        height: 370px;
+    }
+    .searchmobile {
+        position: relative;
+        float: right;
+        height: 14px;
+        width: 15px;
+        margin-right: 23px;
+        margin-top: 20px;
+        background-image: url('/images/search-mobile.png');
+        background-repeat: no-repeat;
+        background-size: 96%;
+    }
+    .titulo {
+        position: relative;
+        top: -1px;
+        font-size: 25px;
+    }
+    .subtitulo {
+        font-size: 14.45px;
+    }
+    .menu {
+        display: none;
+    }
+    .container {
+        padding-top: 20px;
+    }
+}
+
+@media (min-width:769px) and (max-width: 1007px) {
+    .menu {
+        height: 100px;
+    }
+    ul {
+        margin: 0;
+    }
+    li {
+        line-height: 50px;
+        font-size: 15px;
+    }
+    .box2 {
+        max-width: 1007px;
+        width: 24.7%;
+    }
+    .box1 {
+        width: 72%;
+        height: 730px;
+    }
+    .container {
+        height: 800px;
+    }
+    .box3 {
+        height: 116px;
+    }
+}
+
+@media (max-width:424px) {
+    .logo-background {
+        height: 191px;
+        position: relative;
+        width: 805px;
+        background-position: left;
+        left: -392px;
+        margin-right: 0;
+    }
+    .logo {
+        position: relative;
+        left: 198px;
+        background-size: 97%;
+        width: 345px;
+        height: 120px;
+        right: 0;
+        background-position-y: 2px;
+        background-position-x: 4px;
+        top: 31.9px;
+    }
+    .imagem {
+        height: 185px;
+    }
+}
+
+@media (max-width:360px) {
+    body,html{
+        max-width: 330px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .logo-background {
+      height: 157px;
+      background-position: left;
+      position: relative;
+      left: 0;
+      width: 320px;
+      background-position-x:49%;
+    }
+    .logo{
+        background-size: 90%;
+        width: 280px;
+        height: 101px;
+        position: relative;
+        left: 3%;
+        top: 35px;
+    }
+    .submenu{
+        max-width: 320px;
+        width: 100%;
+        margin: 0;
+    }
+    .container{
+        max-width: 320px;
+        width: 100%;
+        margin: 0;
+    }
+    .box2,.box3{
+        display: none;
+    }
+    .searchmobile{
+        float: right;
+
+    }
+    .box1{
+        max-width: 320px;
+
+    }
+
+}
+
+/* media querry Mobile*/
+
+/* fazer query de 784 ate 1016 px */
+
+/* mexer query mobile*/
