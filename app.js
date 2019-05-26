@@ -3,23 +3,30 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var logger = require('morgan');
+
 // Fix Bug Heroku 
 var porta = process.env.PORT || 8080;
 
 //  Definindo a Engine de renderização
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+
 //  Definindo Loggers e arquivos estaticos
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, '/public')));
+
 //  Define as requisições de rotas
 var home = require('./routes/home');
-var member =require('./routes/member');
+var login = require('./routes/login');
+var singin = require('./routes/singin');
+
 //  Define as rotas
 app.use('/', home);
-app.use('/member', member);
+app.use('/login', login);
+app.use('/singin', singin);
+
 //  Propriedade do HTTP ERRORS
 app.use(function (req, res, next) {
     next(createError(404));

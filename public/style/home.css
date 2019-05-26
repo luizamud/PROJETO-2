@@ -2,14 +2,14 @@
     font-family: 'Opensans-Regular';
     font-weight: normal;
     font-style: normal;
-    src: url('fonts/OpenSans-Regular.ttf');
+    src: url('/fonts/OpenSans-Regular.ttf');
 }
 
 @font-face {
     font-family: 'Opensans-Regular-Light';
     font-weight: normal;
     font-style: normal;
-    src: url('fonts/OpenSans-Light.ttf');
+    src: url('/fonts/OpenSans-Light.ttf');
 }
 
 body {
