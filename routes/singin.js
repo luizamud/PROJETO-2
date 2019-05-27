@@ -40,18 +40,16 @@ router.post('/valid', (req, res) => {
                         banco.collection('user').insertOne(documento, (err) => {
                             if (err) throw err;
                             if (!err) {
-                                console.log("Salvo no banco");
+                                console.log(`Salvo no Banco\nCookies adicionados`);
+                                res.cookie("CurrentUser",documento);                            
                                 client.close();
                             }
                         });
                     } else {
                         console.log("usuario ja cadastrado");
-                        res.render('singin', {
-                            userError: "Email / Usuario existentes"
-                        });
+                        res.render('singin', {userError: "Email / Usuario existentes"});
                         client.close();
                         //fecha o banco
-
                     }
 
                 }
