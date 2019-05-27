@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/luizamud/SNM#readme",
   "dependencies": {
+    "cookie-parser": "^1.4.4",
     "express": "^4.17.0",
     "hbs": "^4.0.4",
     "http-errors": "^1.7.2",

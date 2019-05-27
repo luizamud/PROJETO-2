@@ -3,6 +3,7 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var logger = require('morgan');
+var cookie = require('cookie-parser');
 
 // Fix Bug Heroku 
 var porta = process.env.PORT || 8080;
@@ -10,7 +11,8 @@ var porta = process.env.PORT || 8080;
 //  Definindo a Engine de renderização
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
-
+//  Definindo Sessoes e cookie
+app.use(cookie());
 //  Definindo Loggers e arquivos estaticos
 app.use(logger('dev'));
 app.use(express.json());
@@ -45,7 +47,7 @@ app.use(function (err, req, res, next) {
 
 app.listen(porta, (err) => {
     if (!err) {
-        console.log(`\n\nServer => ON\nPort => ${porta}\n\n`);
+        console.log(`Server => ON\nPort => ${porta}`);
     }
 });
 
