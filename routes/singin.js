@@ -4,7 +4,7 @@ var client = require('mongodb').MongoClient;
 var url = 'mongodb://127.0.0.1:27017';
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
+router.get('/', function(req, res, next) {
     res.render('singin');
 });
 router.post('/valid', (req, res) => {
@@ -14,34 +14,44 @@ router.post('/valid', (req, res) => {
     var endereco = req.body.address;
     var senha = req.body.password;
     var cargo = 'member';
-    var query = { username: usuario }
-    var documento = { username: usuario, name: nome, email: correio, address: endereco, password: senha, office: cargo };
 
-    client.connect(url, { useNewUrlParser: true }, (err, client) => {
+    var documento = {
+        username: usuario,
+        name: nome,
+        email: correio,
+        address: endereco,
+        password: senha,
+        office: cargo
+    };
+
+    client.connect(url, {
+        useNewUrlParser: true
+    }, (err, client) => {
         if (err) throw err;
         if (!err) {
-            let banco = client.db('novelmania');
+            var banco = client.db('novelmania');
             //Consulta Banco!
-            banco.collection('user').findOne(query, (err, result) => {
-                var tempemail = result.email;
-                var tempuser = result.username
+            banco.collection('user').findOne({
+                username: usuario
+            }, (err, result) => {
                 if (err) throw err;
-
                 if (!err) {
-                    if ((tempuser != usuario) && (tempemail != correio)) {
-                        banco.collection('user').insert(documento, (err, result) => {
+                    if (result == null) {
+                        banco.collection('user').insertOne(documento, (err) => {
                             if (err) throw err;
                             if (!err) {
                                 console.log("Salvo no banco");
-                                console.log(result);
+                                client.close();
                             }
                         });
                     } else {
                         console.log("usuario ja cadastrado");
-                        res.render('singin', { userError: "Email / Usuario existentes" });
+                        res.render('singin', {
+                            userError: "Email / Usuario existentes"
+                        });
                         client.close();
                         //fecha o banco
-                        
+
                     }
 
                 }
@@ -49,8 +59,6 @@ router.post('/valid', (req, res) => {
             });
         }
 
-
     });
 });
 module.exports = router;
-
