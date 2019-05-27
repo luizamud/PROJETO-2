@@ -40,6 +40,8 @@ router.post('/valid', (req, res) => {
                         console.log("usuario ja cadastrado");
                         res.render('singin', { userError: "Email / Usuario existentes" });
                         client.close();
+                        //fecha o banco
+                        
                     }
 
                 }
