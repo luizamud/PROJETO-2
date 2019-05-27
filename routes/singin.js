@@ -8,55 +8,47 @@ router.get('/', function (req, res, next) {
     res.render('singin');
 });
 router.post('/valid', (req, res) => {
-    var user = req.body.username;
-    var name = req.body.name;
-    var email = req.body.email;
-    var address = req.body.address;
-    var password = req.body.password;
-    var office = 'member';
+    var usuario = req.body.username;
+    var nome = req.body.name;
+    var correio = req.body.email;
+    var endereco = req.body.address;
+    var senha = req.body.password;
+    var cargo = 'member';
+    var query = { username: usuario }
+    var documento = { username: usuario, name: nome, email: correio, address: endereco, password: senha, office: cargo };
 
-    var documento = ({ user: user, name: name, email: email, address: address, password: password, office: office });
-    
-    console.log(`Usuario: ${user}\nNome: ${name}\nE-mail: ${email}\nEndereço: ${address}\nSenha: ${password}\nCargo: ${office}`);
-    //  Inicia o Banco
     client.connect(url, { useNewUrlParser: true }, (err, client) => {
         if (err) throw err;
         if (!err) {
             let banco = client.db('novelmania');
             //Consulta Banco!
-            banco.collection('novelmania').findOne({user: user}, (err, database) => {
-                var tempuser = database.user;
-                var tempemail = database.email;
-                if (err) {
-                    console.log(err);
-                }
+            banco.collection('user').findOne(query, (err, result) => {
+                var tempemail = result.email;
+                var tempuser = result.username
+                if (err) throw err;
+
                 if (!err) {
-
-                    console.log("consultado");
-
-                    if (tempuser == user) {
-                        res.render('singin', { userError: "Usuario existente" });
-                        if (tempemail == email) {
-                            console.log("erro");
-                            res.render('singin', { emailError: "E-mail existente" });
-                        } else {
-                            banco.collection('novelmania').insertOne(documento, (err) => {
-                                if (err) throw err;
-                                if (!err) {
-                                    res.cookie("userData", documento);
-                                    console.log('Cookie Adicionado');
-                                    res.redirect('/member');
-                                }
-                            });
-                        }
+                    if ((tempuser != usuario) && (tempemail != correio)) {
+                        banco.collection('user').insert(documento, (err, result) => {
+                            if (err) throw err;
+                            if (!err) {
+                                console.log("Salvo no banco");
+                                console.log(result);
+                            }
+                        });
+                    } else {
+                        console.log("usuario ja cadastrado");
+                        res.render('singin', { userError: "Email / Usuario existentes" });
+                        client.close();
                     }
 
-
-
                 }
+
             });
         }
-    });
 
+
+    });
 });
 module.exports = router;
+
