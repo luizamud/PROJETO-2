@@ -43,6 +43,7 @@ router.post('/valid', (req, res) => {
                                 console.log(`Salvo no Banco\nCookies adicionados`);
                                 res.cookie("CurrentUser",documento);                            
                                 client.close();
+                                res.redirect('/login');
                             }
                         });
                     } else {
