@@ -25,19 +25,22 @@
             <div class="box-header">
                 <h2>Log In</h2>
             </div>
-            <label for="username" required >Username</label>
-            <br />
-            <input type="text" id="username">
-            <br />
-            <label for="password">Password</label>
-            <br />
-            <input type="password" id="password">
-            <br />
-            <button type="submit">Sign In</button>
-            <br />
-            <a href="/singin">
-                <p class="small">Não tem conta ? Cadastre-se aqui</p>
-            </a>
+            <form id="login" action="/login/valid" method="POST">
+                <p style="color: red">{{erroLogin}}</p>
+                <label for="username">Usuario</label>
+                <br />
+                <input type="text" id="username" required placeholder="Usuario">
+                <br />
+                <label for="password">Senha</label>
+                <br />
+                <input type="password" id="password" required placeholder="Senha">
+                <br />
+                <button type="submit" value="submit">Sign In</button>
+                <br />
+                <a href="/singin">
+                    <p class="small">Não tem conta ? Cadastre-se aqui</p>
+                </a>
+            </form>
         </div>
     </div>
 </body>
