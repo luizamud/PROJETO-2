@@ -4,7 +4,7 @@ var client = require('mongodb').MongoClient;
 var url = 'mongodb://127.0.0.1:27017';
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', function (req, res, next) {
     res.render('singin');
 });
 router.post('/valid', (req, res) => {
@@ -41,14 +41,14 @@ router.post('/valid', (req, res) => {
                             if (err) throw err;
                             if (!err) {
                                 console.log(`Salvo no Banco\nCookies adicionados`);
-                                res.cookie("CurrentUser",documento);                            
+                                res.cookie("CurrentUser", documento);
                                 client.close();
                                 res.redirect('/login');
                             }
                         });
                     } else {
                         console.log("usuario ja cadastrado");
-                        res.render('singin', {userError: "Email / Usuario existentes"});
+                        res.render('singin', { userError: "Email / Usuario existentes" });
                         client.close();
                         //fecha o banco
                     }
