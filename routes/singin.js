@@ -36,7 +36,10 @@ router.post('/valid', (req, res) => {
             }, (err, result) => {
                 if (err) throw err;
                 if (!err) {
-                    if (result == null) {
+                    let json = JSON.stringify(result);
+                    let temp = JSON.parse(json);
+
+                    if ((temp.username != usuario) && (temp.password != senha)) {
                         banco.collection('user').insertOne(documento, (err) => {
                             if (err) throw err;
                             if (!err) {
