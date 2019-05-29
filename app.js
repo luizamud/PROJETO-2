@@ -29,7 +29,7 @@ var member =  require('./routes/member');
 app.use('/', home);
 app.use('/login', login);
 app.use('/singin', singin);
-app.use('/meber', member);
+app.use('/member', member);
 
 //  Propriedade do HTTP ERRORS
 app.use(function (req, res, next) {
