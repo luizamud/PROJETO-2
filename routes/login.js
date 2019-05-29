@@ -23,7 +23,7 @@ router.post('/valid', (req, res) => {
                     var temp = JSON.parse(json);
 
                     if ((temp.username == usuario) && (temp.password == senha)) {
-                        res.cookie("CurrentUser", result);
+                        res.cookie("CurrentUser",result);
                         res.redirect('/member');
 
                     } else {
