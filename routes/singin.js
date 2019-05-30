@@ -24,43 +24,6 @@ router.post('/valid', (req, res) => {
         office: cargo
     };
 
-    client.connect(url, { useNewUrlParser: true }, (err, client) => {
-        if (err) throw err;
-        if (!err) {
-            var db = client.db('novelmania');
-            db.collection('user').findOne({ username: usuario }, (err, result) => {
-                if (err) throw err;
-                if(result == null){
-                    console.log("em branco"+result);
-                }
-                if (!err) {
-
-                    var json = JSON.stringify(result);
-                    var temp = JSON.parse(json);
-                    console.log(json,temp);
-                    
-                    if ((temp.username != usuario) && (temp.password != senha)) {
-                        banco.collection('user').insertOne(documento, (err) => {
-                            if (err) throw err;
-                            if (!err) {
-                                console.log(`Salvo no Banco\nCookies adicionados`);
-                                res.cookie("CurrentUser",documento);                            
-                                client.close();
-                                res.redirect('/login');
-                            }
-                        });
-                    } else {
-                        console.log("usuario ja cadastrado");
-                        res.render('singin', {userError: "Email / Usuario existentes"});
-                        client.close();
-                        //fecha o banco
-                    }
-
-                }
-
-            });
-        }
-
-    });
+   
 });
 module.exports = router;
