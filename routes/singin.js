@@ -4,7 +4,7 @@ var client = require('mongodb').MongoClient;
 var url = 'mongodb://127.0.0.1:27017';
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
+router.get('/', function(req, res, next) {
     res.render('singin');
 });
 router.post('/valid', (req, res) => {
@@ -24,31 +24,34 @@ router.post('/valid', (req, res) => {
         office: cargo
     };
 
-    client.connect(url, {
-        useNewUrlParser: true
-    }, (err, client) => {
+    client.connect(url, { useNewUrlParser: true }, (err, client) => {
         if (err) throw err;
         if (!err) {
-            var banco = client.db('novelmania');
-            //Consulta Banco!
-            banco.collection('user').findOne({
-                username: usuario
-            }, (err, result) => {
+            var db = client.db('novelmania');
+            db.collection('user').findOne({ username: usuario }, (err, result) => {
                 if (err) throw err;
+                if(result == null){
+                    console.log("em branco"+result);
+                }
                 if (!err) {
-                    if (result == null) {
+
+                    var json = JSON.stringify(result);
+                    var temp = JSON.parse(json);
+                    console.log(json,temp);
+                    
+                    if ((temp.username != usuario) && (temp.password != senha)) {
                         banco.collection('user').insertOne(documento, (err) => {
                             if (err) throw err;
                             if (!err) {
                                 console.log(`Salvo no Banco\nCookies adicionados`);
-                                res.cookie("CurrentUser", documento);
+                                res.cookie("CurrentUser",documento);                            
                                 client.close();
                                 res.redirect('/login');
                             }
                         });
                     } else {
                         console.log("usuario ja cadastrado");
-                        res.render('singin', { userError: "Email / Usuario existentes" });
+                        res.render('singin', {userError: "Email / Usuario existentes"});
                         client.close();
                         //fecha o banco
                     }
