@@ -29,9 +29,13 @@ app.use('/', home);
 app.use('/login', login);
 app.use('/singin', singin);
 <<<<<<< HEAD
+<<<<<<< HEAD
 app.use('/member', member);
 =======
 >>>>>>> parent of 4034464... Backup de Rotina
+=======
+app.use('/member', member);
+>>>>>>> 66130dd145e4d048706e0017e55f7d05374a9be8
 
 //  Propriedade do HTTP ERRORS
 app.use(function (req, res, next) {
