@@ -24,19 +24,22 @@ router.post('/valid', (req, res) => {
         office: cargo
     };
 
-    client.connect(url, {
-        useNewUrlParser: true
-    }, (err, client) => {
+    client.connect(url, { useNewUrlParser: true }, (err, client) => {
         if (err) throw err;
         if (!err) {
-            var banco = client.db('novelmania');
-            //Consulta Banco!
-            banco.collection('user').findOne({
-                username: usuario
-            }, (err, result) => {
+            var db = client.db('novelmania');
+            db.collection('user').findOne({ username: usuario }, (err, result) => {
                 if (err) throw err;
+                if(result == null){
+                    console.log("em branco"+result);
+                }
                 if (!err) {
-                    if (result == null) {
+
+                    var json = JSON.stringify(result);
+                    var temp = JSON.parse(json);
+                    console.log(json,temp);
+                    
+                    if ((temp.username != usuario) && (temp.password != senha)) {
                         banco.collection('user').insertOne(documento, (err) => {
                             if (err) throw err;
                             if (!err) {

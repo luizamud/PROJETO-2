@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'Opensans-Regular';
+    font-weight: normal;
+    font-style: normal;
+    src: url('/fonts/OpenSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Opensans-Regular-Light';
+    font-weight: normal;
+    font-style: normal;
+    src: url('/fonts/OpenSans-Light.ttf');
+}
+
+body {
+    display: inline;
+    max-width: 1920px;
+    margin: 0;
+    background-image: url('/images/type-cinza.png');
+    background-repeat: repeat;
+}
+
+.logo-background {
+    height: 215px;
+    background-image: url('/images/Banner-do-site-Novel-Mania.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 1920px;
+}
+
+.logo {
+    position: relative;
+    top: 16.1%;
+    width: 400px;
+    height: 145px;
+    margin: 0 auto;
+    background-image: url('/images/Logotipo-1-Site-Novel-Mania.png');
+    background-repeat: no-repeat;
+}
+.menu {
+    position: relative;
+    float: left;
+    width: 100%;
+    max-width: 1920px;
+    height: 50px;
+    background-color: #222;
+    top: -18px;
+    list-style-type: none;
+}
+.container{
+    height: 600px;
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.76);
+    margin-top: 80px;
+    margin-left: 40px;
+    padding: 50px;
+}
+.user{
+    background-color: white;
+    width: 400px;
+    height: 600px;
+}
+h1{
+text-align: center;
+}
+h3{
+    text-align: center;
+}

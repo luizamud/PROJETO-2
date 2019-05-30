@@ -6,7 +6,7 @@ var logger = require('morgan');
 var cookie = require('cookie-parser');
 
 // Fix Bug Heroku 
-var porta = process.env.PORT || 7080;
+var porta = process.env.PORT || 8080;
 
 //  Definindo a Engine de renderização
 app.set('views', path.join(__dirname, 'views'));
@@ -28,6 +28,9 @@ var singin = require('./routes/singin');
 app.use('/', home);
 app.use('/login', login);
 app.use('/singin', singin);
+
+
+
 
 //  Propriedade do HTTP ERRORS
 app.use(function (req, res, next) {

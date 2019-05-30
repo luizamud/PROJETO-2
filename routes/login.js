@@ -7,22 +7,33 @@ var url = 'mongodb://127.0.0.1:27017';
 router.get('/', function (req, res, next) {
     res.render('login');
 });
-router.post('/valid', (req,res)=>{
+router.post('/valid', (req, res) => {
     var usuario = req.body.username;
     var senha = req.body.password;
-    var query = {username: usuario,password: senha};
-    client.connect(url,{useNewUrlParser: true},(err,client)=>{
-        if (err) throw err;
-        var db = client.db('novelmania');
-        db.collection('user').findOne(query,(err,result)=>{
-            if(err) throw err;
-            if(!err){
-                if(result == null){
-                    res.render('login',{erroLogin: "Usuario ou Senha Inexistente"});
-                }
-            }
-        });
 
+
+    client.connect(url, { useNewUrlParser: true }, (err, client) => {
+        if (err) throw err;
+        if (!err) {
+            var db = client.db('novelmania');
+            db.collection('user').findOne({ username: usuario }, (err, result) => {
+                if (err) throw err;
+                if (!err) {
+                    var json = JSON.stringify(result);
+                    var temp = JSON.parse(json);
+
+                    if ((temp.username == usuario) && (temp.password == senha)) {
+                        res.cookie("CurrentUser",result);
+                        res.redirect('/member');
+
+                    } else {
+                        res.render('login', { erroLogin: "Usuario ou senha INCORRETO" });
+
+                    }
+
+                }
+            });
+        }
     });
 });
 module.exports = router;
