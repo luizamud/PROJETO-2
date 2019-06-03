@@ -23,20 +23,13 @@ app.use(express.static(path.join(__dirname, '/public')));
 var home = require('./routes/home');
 var login = require('./routes/login');
 var singin = require('./routes/singin');
+var member = require('./routes/member')
 
 //  Define as rotas
 app.use('/', home);
 app.use('/login', login);
 app.use('/singin', singin);
-<<<<<<< HEAD
-<<<<<<< HEAD
 app.use('/member', member);
-=======
->>>>>>> parent of 4034464... Backup de Rotina
-=======
-app.use('/member', member);
->>>>>>> 66130dd145e4d048706e0017e55f7d05374a9be8
-
 
 
 
@@ -47,7 +40,7 @@ app.use(function (req, res, next) {
 
 //  Propriedade para tratamento de erro do HBS (LOGGER)
 app.use(function (err, req, res, next) {
-    // set locals, only providing error in development
+    // set locals, only providing error in development  
     res.locals.message = err.message;
     res.locals.error = req.app.get('env') === 'development' ? err : {};
 
