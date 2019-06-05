@@ -1,16 +1,18 @@
 {
-  "name": "server-novel-mania",
-  "version": "1.0.0",
-  "description": "",
+  "name": "ani-blog",
+  "version": "0.3.4",
+  "description": "Aplicaçao desenvolvida com inteçao de gerenciar post e ususarios com a ultilizaçao de frameworks e tambem com a database MOngodb NOSQL",
   "main": "index.js",
   "scripts": {
+    "start": "node app.js",
+    "restart": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/luizamud/SNM.git"
   },
-  "author": "",
+  "author": "luizamud & JMMarcel",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/luizamud/SNM/issues"
@@ -24,5 +26,6 @@
     "mongodb": "^3.2.6",
     "mongoose": "^5.5.11",
     "morgan": "^1.9.1"
-  }
+  },
+  "devDependencies": {}
 }
