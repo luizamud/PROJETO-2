@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var client = require('mongodb').MongoClient;
-var url = "mongodb+srv://novelmania:<mongodb>@novelmania-zijpc.mongodb.net/test?retryWrites=true&w=majority";
+var url ='mongodb+srv://user:user@novelmania-hhkgn.mongodb.net/test?retryWrites=true&w=majority';
 
 /* GET home page. */
 router.get('/', function (req, res, next) {

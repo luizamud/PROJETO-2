@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var client = require('mongodb').MongoClient;
-var url = "mongodb+srv://novelmania:<mongodb>@novelmania-zijpc.mongodb.net/test?retryWrites=true&w=majority";
+var url ='mongodb+srv://user:user@novelmania-hhkgn.mongodb.net/test?retryWrites=true&w=majority';
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -24,7 +24,7 @@ router.post('/valid', (req, res) => {
         office: cargo
     };
     console.log(documento);
-    client.connect(url, { useNewUrlParser: true }, (err, client) => {
+    client.connect(url, (err, client) => {
         if (err) throw err;
         /**
          * No caso com o mongo e o driver mongo a resposta para se cadastrar e simples,
@@ -43,10 +43,12 @@ router.post('/valid', (req, res) => {
                            if(err)throw err;
                            if(!err){
                                console.log("Save suceful");
+                               client.close();
                            }
                        });
                     }
                     if(result != null){
+                        client.close();
                         console.log("Nao pode salvar");
                         console.log(result);
                         res.render('singin',{userError: "E-mail ou Usuario ja cadastrados"});
