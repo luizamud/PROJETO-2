@@ -25,7 +25,7 @@ router.post('/valid', (req, res) => {
                     if ((temp.username == usuario) && (temp.password == senha)) {
                         res.cookie("CurrentUser",result);
                         res.redirect('/member');
-                        client.close();
+                        
 
                     } else {
                         res.render('login', { erroLogin: "Usuario ou senha INCORRETO" });
