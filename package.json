@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
-    "restart": "nodemon app.js",
+    "restart": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
