@@ -24,7 +24,7 @@ router.post('/valid', (req, res) => {
         office: cargo
     };
     console.log(documento);
-    client.connect(url, (err, client) => {
+    client.connect(url,{useNewUrlParser:true}, (err, client) => {
         if (err) throw err;
         /**
          * No caso com o mongo e o driver mongo a resposta para se cadastrar e simples,
