@@ -1,7 +1,9 @@
 var express = require('express');
 var router = express.Router();
 var client = require('mongodb').MongoClient;
-var url ='mongodb+srv://user:user@novelmania-hhkgn.mongodb.net/test?retryWrites=true&w=majority';
+const url = "mongodb+srv://user:user@azureapp-n7yam.azure.mongodb.net/test?retryWrites=true&w=majority";
+
+
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -17,15 +19,16 @@ router.post('/valid', (req, res) => {
         if (!err) {
             var db = client.db('novelmania');
             db.collection('user').findOne({ username: usuario }, (err, result) => {
+                console.log("deu certo");
                 if (err) throw err;
                 if (!err) {
                     var json = JSON.stringify(result);
                     var temp = JSON.parse(json);
                     console.log(temp);
                     if ((temp.username == usuario) && (temp.password == senha)) {
-                        res.cookie("CurrentUser",result);
+                        res.cookie("CurrentUser", result);
                         res.redirect('/member');
-                        
+
 
                     } else {
                         res.render('login', { erroLogin: "Usuario ou senha INCORRETO" });
