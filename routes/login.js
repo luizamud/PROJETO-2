@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var client = require('mongodb').MongoClient;
-const url = "mongodb+srv://dbUser:dbUserPassword@cluster0-1sqfq.mongodb.net/test?retryWrites=true&w=majority";/* GET home page. */
+const url = "mongodb+srv://dbUser:dbUserPassword@cluster0-1sqfq.mongodb.net/test?retryWrites=true&w=majority";/* MongoString: User=> dbUser && Password=> dbUserPassword */
 
 
 
