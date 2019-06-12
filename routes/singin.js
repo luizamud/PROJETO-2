@@ -36,18 +36,18 @@ router.post('/valid', (req, res) => {
                 if (err) throw err;
                 if (!err) {
                     if (result == null) {
-                        console.log("Add banco");
+
                         db.collection('user').insertOne(documento, (err) => {
                             if (err) throw err;
                             if (!err) {
-                                console.log("Save suceful");
+                                res.redirect('/login');
+                                res.cookie('NewUser', documento);
                                 client.close();
                             }
                         });
                     }
                     if (result != null) {
                         client.close();
-                        console.log("Nao pode salvar");
                         console.log(result);
                         res.render('singin', { userError: "E-mail ou Usuario ja cadastrados" });
                     }
