@@ -32,12 +32,12 @@ router.post('/valid', (req, res) => {
          */
         if (!err) {
             var db = client.db('novelmania');
-            db.collection('user').findOne({ username: usuario }, (err, result) => {
+            db.collection('user').findMany({ username: usuario }, (err, result) => {
                 if (err) throw err;
                 if (!err) {
                     if (result == null) {
 
-                        db.collection('user').insertOne(documento, (err) => {
+                        db.collection('user').insertMany(documento, (err) => {
                             if (err) throw err;
                             if (!err) {
                                 res.redirect('/login');
