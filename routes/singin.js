@@ -33,7 +33,7 @@ router.post('/valid', (req, res) => {
          */
         if (!err) {
             var db = client.db('novelmania');
-            db.collection('user').findMany({ username: usuario }, (err, result) => {
+            db.collection('user').find({ username: usuario }, (err, result) => {
                 if (err) throw err;
                 if (!err) {
                     if (result == null) {
