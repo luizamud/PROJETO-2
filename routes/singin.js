@@ -29,6 +29,7 @@ router.post('/valid', (req, res) => {
          * se nao tiver o registro dentro do banco se responde null ou seja
          * if(result != null) => Aqui se tiver algo no banco ele devolve uma call back de erro direto pro hbs
          * if(result == null) => Quer dizer que se nao tiver nada no banco pode cadastrar
+         * usar findMany & insertMany para nao haver conflito entre os saves
          */
         if (!err) {
             var db = client.db('novelmania');
@@ -36,7 +37,6 @@ router.post('/valid', (req, res) => {
                 if (err) throw err;
                 if (!err) {
                     if (result == null) {
-
                         db.collection('user').insertMany(documento, (err) => {
                             if (err) throw err;
                             if (!err) {
