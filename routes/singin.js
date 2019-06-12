@@ -37,7 +37,7 @@ router.post('/valid', (req, res) => {
                 if (err) throw err;
                 if (!err) {
                     if (result == null) {
-                        db.collection('user').insertMany(documento, (err) => {
+                        db.collection('user').insertOne(documento, (err) => {
                             if (err) throw err;
                             if (!err) {
                                 res.redirect('/login');
