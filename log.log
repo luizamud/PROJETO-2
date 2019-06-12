@@ -1,0 +1,100 @@
+2019-06-12T16:07:18.301225+00:00 heroku[router]: at=info method=GET path="/style/animate.css" host=novelmanias.herokuapp.com request_id=b7f96d7a-9f92-412f-bb0a-44c27330681e fwd="177.79.70.152" dyno=web.1 connect=1ms service=11ms status=200 bytes=71115 protocol=https
+2019-06-12T16:07:18.290285+00:00 app[web.1]: [0mGET /stylesheets/style.css [33m404 [0m6.230 ms - 195[0m
+2019-06-12T16:07:18.299711+00:00 app[web.1]: [0mGET /style/animate.css [32m200 [0m5.630 ms - 70824[0m
+2019-06-12T16:07:18.540198+00:00 heroku[router]: at=info method=GET path="/style/login.css" host=novelmanias.herokuapp.com request_id=f9b4e20a-5edf-4ef4-b5c3-6c3b28450879 fwd="177.79.70.152" dyno=web.1 connect=0ms service=3ms status=200 bytes=2954 protocol=https
+2019-06-12T16:07:18.541200+00:00 app[web.1]: [0mGET /style/login.css [32m200 [0m1.248 ms - 2666[0m
+2019-06-12T16:07:19.257319+00:00 heroku[router]: at=info method=GET path="/images/photo_bg.jpg" host=novelmanias.herokuapp.com request_id=053ab9e6-369c-4971-b39c-f5b0a219cc99 fwd="177.79.70.152" dyno=web.1 connect=1ms service=25ms status=200 bytes=298319 protocol=https
+2019-06-12T16:07:19.241452+00:00 app[web.1]: [0mGET /images/photo_bg.jpg [32m200 [0m1.181 ms - 298040[0m
+2019-06-12T16:07:20.910776+00:00 app[web.1]: [0mGET /favicon.ico [33m404 [0m1.030 ms - 195[0m
+2019-06-12T16:07:20.911745+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=novelmanias.herokuapp.com request_id=d206e487-38c3-4bf0-84df-b61a6b0f3811 fwd="177.79.70.152" dyno=web.1 connect=0ms service=3ms status=404 bytes=403 protocol=https
+2019-06-12T16:07:26.817373+00:00 heroku[router]: at=error code=H13 desc="Connection closed without response" method=POST path="/login/valid" host=novelmanias.herokuapp.com request_id=5e17bfe9-c80f-43f2-b279-c7cfbee43246 fwd="177.79.70.152" dyno=web.1 connect=0ms service=242ms status=503 bytes=0 protocol=https
+2019-06-12T16:07:26.811152+00:00 app[web.1]: /app/node_modules/mongodb/lib/topologies/replset.js:368
+2019-06-12T16:07:26.811166+00:00 app[web.1]: throw err;
+2019-06-12T16:07:26.811168+00:00 app[web.1]: ^
+2019-06-12T16:07:26.811170+00:00 app[web.1]: 
+2019-06-12T16:07:26.811173+00:00 app[web.1]: MongoNetworkError: connection 4 to cluster0-shard-00-00-1sqfq.mongodb.net:27017 closed
+2019-06-12T16:07:26.811176+00:00 app[web.1]: at TLSSocket.<anonymous> (/app/node_modules/mongodb-core/lib/connection/connection.js:352:9)
+2019-06-12T16:07:26.811178+00:00 app[web.1]: at Object.onceWrapper (events.js:286:20)
+2019-06-12T16:07:26.811180+00:00 app[web.1]: at TLSSocket.emit (events.js:198:13)
+2019-06-12T16:07:26.811182+00:00 app[web.1]: at _handle.close (net.js:606:12)
+2019-06-12T16:07:26.811184+00:00 app[web.1]: at TCP.done (_tls_wrap.js:388:7)
+2019-06-12T16:07:26.819410+00:00 app[web.1]: npm ERR! code ELIFECYCLE
+2019-06-12T16:07:26.819781+00:00 app[web.1]: npm ERR! errno 1
+2019-06-12T16:07:26.820923+00:00 app[web.1]: npm ERR! ani-blog@0.3.4 start: `node app.js`
+2019-06-12T16:07:26.821065+00:00 app[web.1]: npm ERR! Exit status 1
+2019-06-12T16:07:26.821323+00:00 app[web.1]: npm ERR!
+2019-06-12T16:07:26.821487+00:00 app[web.1]: npm ERR! Failed at the ani-blog@0.3.4 start script.
+2019-06-12T16:07:26.821638+00:00 app[web.1]: npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+2019-06-12T16:07:31.365678+00:00 app[web.1]: 
+2019-06-12T16:07:31.365896+00:00 app[web.1]: npm ERR! A complete log of this run can be found in:
+2019-06-12T16:07:31.366073+00:00 app[web.1]: npm ERR!     /app/.npm/_logs/2019-06-12T16_07_26_822Z-debug.log
+2019-06-12T16:07:31.543226+00:00 heroku[web.1]: State changed from up to crashed
+2019-06-12T16:07:31.515121+00:00 heroku[web.1]: Process exited with status 1
+2019-06-12T16:08:45.093896+00:00 heroku[web.1]: State changed from crashed to starting
+2019-06-12T16:08:47.950203+00:00 heroku[web.1]: Starting process with command `npm start`
+2019-06-12T16:08:50.214391+00:00 app[web.1]: 
+2019-06-12T16:08:50.214418+00:00 app[web.1]: > ani-blog@0.3.4 start /app
+2019-06-12T16:08:50.214420+00:00 app[web.1]: > node app.js
+2019-06-12T16:08:50.214422+00:00 app[web.1]: 
+2019-06-12T16:08:50.594837+00:00 app[web.1]: Server => ON
+2019-06-12T16:08:50.594884+00:00 app[web.1]: Port => 39771
+2019-06-12T16:08:51.643717+00:00 heroku[web.1]: State changed from starting to up
+2019-06-12T16:09:13.454015+00:00 heroku[router]: at=info method=GET path="/" host=novelmanias.herokuapp.com request_id=b4042b57-efbc-47c8-90ef-305955932733 fwd="177.92.42.194" dyno=web.1 connect=1ms service=327ms status=304 bytes=151 protocol=https
+2019-06-12T16:09:13.458162+00:00 app[web.1]: [0mGET / [36m304 [0m296.648 ms - -[0m
+2019-06-12T16:09:13.751611+00:00 heroku[router]: at=info method=GET path="/stylesheets/style.css" host=novelmanias.herokuapp.com request_id=320f2d62-c58f-4e7f-9a79-370f639283bb fwd="177.92.42.194" dyno=web.1 connect=1ms service=42ms status=404 bytes=403 protocol=https
+2019-06-12T16:09:13.731070+00:00 app[web.1]: [0mGET /style/home.css [36m304 [0m15.335 ms - -[0m
+2019-06-12T16:09:13.749935+00:00 app[web.1]: [0mGET /stylesheets/style.css [33m404 [0m25.627 ms - 195[0m
+2019-06-12T16:09:13.900359+00:00 app[web.1]: [0mGET /images/musica-searcher.png [36m304 [0m5.614 ms - -[0m
+2019-06-12T16:09:13.957358+00:00 app[web.1]: [0mGET /images/type-cinza.png [36m304 [0m2.154 ms - -[0m
+2019-06-12T16:09:13.732412+00:00 heroku[router]: at=info method=GET path="/style/home.css" host=novelmanias.herokuapp.com request_id=5b3a22df-b27b-4912-8e7c-7fc27d04a29f fwd="177.92.42.194" dyno=web.1 connect=1ms service=22ms status=304 bytes=238 protocol=https
+2019-06-12T16:09:13.901345+00:00 heroku[router]: at=info method=GET path="/images/musica-searcher.png" host=novelmanias.herokuapp.com request_id=a06f3baa-67b7-4e1d-84c7-cb354827f545 fwd="177.92.42.194" dyno=web.1 connect=0ms service=9ms status=304 bytes=237 protocol=https
+2019-06-12T16:09:14.049202+00:00 heroku[router]: at=info method=GET path="/fonts/OpenSans-Regular.ttf" host=novelmanias.herokuapp.com request_id=2a28b140-e26a-4978-bb15-9d5296fb973a fwd="177.92.42.194" dyno=web.1 connect=0ms service=6ms status=304 bytes=239 protocol=https
+2019-06-12T16:09:14.060170+00:00 heroku[router]: at=info method=GET path="/fonts/OpenSans-Light.ttf" host=novelmanias.herokuapp.com request_id=6abed3ef-fd92-4f01-b25d-61b01f61c1c4 fwd="177.92.42.194" dyno=web.1 connect=0ms service=11ms status=304 bytes=239 protocol=https
+2019-06-12T16:09:13.958866+00:00 heroku[router]: at=info method=GET path="/images/type-cinza.png" host=novelmanias.herokuapp.com request_id=988ecf93-ff5e-48b1-a483-2e1d53acd551 fwd="177.92.42.194" dyno=web.1 connect=1ms service=6ms status=304 bytes=238 protocol=https
+2019-06-12T16:09:14.149023+00:00 heroku[router]: at=info method=GET path="/images/Banner-de-doa%C3%A7%C3%A3o-Gif-Novel-Mania.gif" host=novelmanias.herokuapp.com request_id=04cf20fa-1edc-4323-9786-63faa6858e4c fwd="177.92.42.194" dyno=web.1 connect=1ms service=3ms status=304 bytes=238 protocol=https
+2019-06-12T16:09:14.050370+00:00 app[web.1]: [0mGET /fonts/OpenSans-Regular.ttf [36m304 [0m0.668 ms - -[0m
+2019-06-12T16:09:14.060013+00:00 app[web.1]: [0mGET /fonts/OpenSans-Light.ttf [36m304 [0m2.541 ms - -[0m
+2019-06-12T16:09:14.146791+00:00 app[web.1]: [0mGET /images/Banner-de-doa%C3%A7%C3%A3o-Gif-Novel-Mania.gif [36m304 [0m0.859 ms - -[0m
+2019-06-12T16:09:14.237108+00:00 app[web.1]: [0mGET /images/Discord-Logo-Wordmark-Color-1-1.png [36m304 [0m0.457 ms - -[0m
+2019-06-12T16:09:14.252713+00:00 app[web.1]: [0mGET /images/Banner-do-site-Novel-Mania.png [36m304 [0m0.499 ms - -[0m
+2019-06-12T16:09:14.235858+00:00 heroku[router]: at=info method=GET path="/images/Discord-Logo-Wordmark-Color-1-1.png" host=novelmanias.herokuapp.com request_id=dfa06716-b800-4a18-b1cc-98c01ad5f45f fwd="177.92.42.194" dyno=web.1 connect=2ms service=5ms status=304 bytes=237 protocol=https
+2019-06-12T16:09:14.253527+00:00 heroku[router]: at=info method=GET path="/images/Banner-do-site-Novel-Mania.png" host=novelmanias.herokuapp.com request_id=33996563-4ce6-462a-88ae-ded54eac359e fwd="177.92.42.194" dyno=web.1 connect=3ms service=4ms status=304 bytes=239 protocol=https
+2019-06-12T16:09:14.309920+00:00 heroku[router]: at=info method=GET path="/images/Logotipo-1-Site-Novel-Mania.png" host=novelmanias.herokuapp.com request_id=e51a94fb-7e7f-4a71-b271-5cde1e59070e fwd="177.92.42.194" dyno=web.1 connect=0ms service=6ms status=304 bytes=238 protocol=https
+2019-06-12T16:09:14.370451+00:00 heroku[router]: at=info method=GET path="/images/Social_Post_-PFF.png" host=novelmanias.herokuapp.com request_id=355f92ad-9a81-4aba-9610-391335aec334 fwd="177.92.42.194" dyno=web.1 connect=0ms service=14ms status=304 bytes=239 protocol=https
+2019-06-12T16:09:14.305918+00:00 app[web.1]: [0mGET /images/Logotipo-1-Site-Novel-Mania.png [36m304 [0m2.011 ms - -[0m
+2019-06-12T16:09:14.368513+00:00 app[web.1]: [0mGET /images/Social_Post_-PFF.png [36m304 [0m9.036 ms - -[0m
+2019-06-12T16:09:14.369601+00:00 app[web.1]: [0mGET /images/seta.png [36m304 [0m1.706 ms - -[0m
+2019-06-12T16:09:14.368851+00:00 heroku[router]: at=info method=GET path="/images/seta.png" host=novelmanias.herokuapp.com request_id=e8f1aa2c-bfd9-4d42-a5fc-6f1c4da6d624 fwd="177.92.42.194" dyno=web.1 connect=0ms service=14ms status=304 bytes=238 protocol=https
+2019-06-12T16:09:31.473273+00:00 app[web.1]: [0mGET /login [36m304 [0m6.122 ms - -[0m
+2019-06-12T16:09:31.691738+00:00 app[web.1]: [0mGET /stylesheets/style.css [33m404 [0m2.968 ms - 195[0m
+2019-06-12T16:09:31.692579+00:00 app[web.1]: [0mGET /style/login.css [36m304 [0m3.063 ms - -[0m
+2019-06-12T16:09:31.693067+00:00 app[web.1]: [0mGET /style/animate.css [36m304 [0m3.039 ms - -[0m
+2019-06-12T16:09:31.472343+00:00 heroku[router]: at=info method=GET path="/login" host=novelmanias.herokuapp.com request_id=f781d9f3-a182-4b6d-805e-69552e1758e1 fwd="177.92.42.194" dyno=web.1 connect=0ms service=8ms status=304 bytes=151 protocol=https
+2019-06-12T16:09:31.690706+00:00 heroku[router]: at=info method=GET path="/stylesheets/style.css" host=novelmanias.herokuapp.com request_id=9de6a335-9748-4ace-ad5a-91b3e27db11e fwd="177.92.42.194" dyno=web.1 connect=0ms service=5ms status=404 bytes=403 protocol=https
+2019-06-12T16:09:31.700345+00:00 heroku[router]: at=info method=GET path="/style/animate.css" host=novelmanias.herokuapp.com request_id=253a08a4-d83e-40eb-800c-4ae6438f9c65 fwd="177.92.42.194" dyno=web.1 connect=0ms service=6ms status=304 bytes=239 protocol=https
+2019-06-12T16:09:31.698747+00:00 heroku[router]: at=info method=GET path="/style/login.css" host=novelmanias.herokuapp.com request_id=b0c136ef-20f0-472b-8348-ced366e31439 fwd="177.92.42.194" dyno=web.1 connect=0ms service=6ms status=304 bytes=237 protocol=https
+2019-06-12T16:09:31.871703+00:00 heroku[router]: at=info method=GET path="/images/photo_bg.jpg" host=novelmanias.herokuapp.com request_id=365c0269-d6a0-43ec-b60e-3bd712dcb67e fwd="177.92.42.194" dyno=web.1 connect=0ms service=3ms status=304 bytes=239 protocol=https
+2019-06-12T16:09:31.872383+00:00 app[web.1]: [0mGET /images/photo_bg.jpg [36m304 [0m0.700 ms - -[0m
+2019-06-12T16:09:41.396275+00:00 app[web.1]: /app/node_modules/mongodb/lib/topologies/replset.js:368
+2019-06-12T16:09:41.396288+00:00 app[web.1]: throw err;
+2019-06-12T16:09:41.396290+00:00 app[web.1]: ^
+2019-06-12T16:09:41.396292+00:00 app[web.1]: 
+2019-06-12T16:09:41.396295+00:00 app[web.1]: MongoNetworkError: connection 5 to cluster0-shard-00-02-1sqfq.mongodb.net:27017 closed
+2019-06-12T16:09:41.396298+00:00 app[web.1]: at TLSSocket.<anonymous> (/app/node_modules/mongodb-core/lib/connection/connection.js:352:9)
+2019-06-12T16:09:41.396301+00:00 app[web.1]: at Object.onceWrapper (events.js:286:20)
+2019-06-12T16:09:41.396303+00:00 app[web.1]: at TLSSocket.emit (events.js:198:13)
+2019-06-12T16:09:41.396305+00:00 app[web.1]: at _handle.close (net.js:606:12)
+2019-06-12T16:09:41.396307+00:00 app[web.1]: at TCP.done (_tls_wrap.js:388:7)
+2019-06-12T16:09:41.404994+00:00 app[web.1]: npm ERR! code ELIFECYCLE
+2019-06-12T16:09:41.405450+00:00 app[web.1]: npm ERR! errno 1
+2019-06-12T16:09:41.406612+00:00 app[web.1]: npm ERR! ani-blog@0.3.4 start: `node app.js`
+2019-06-12T16:09:41.406786+00:00 app[web.1]: npm ERR! Exit status 1
+2019-06-12T16:09:41.407049+00:00 app[web.1]: npm ERR!
+2019-06-12T16:09:41.407223+00:00 app[web.1]: npm ERR! Failed at the ani-blog@0.3.4 start script.
+2019-06-12T16:09:41.407390+00:00 app[web.1]: npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+2019-06-12T16:09:41.414731+00:00 app[web.1]: 
+2019-06-12T16:09:41.414875+00:00 app[web.1]: npm ERR! A complete log of this run can be found in:
+2019-06-12T16:09:41.415008+00:00 app[web.1]: npm ERR!     /app/.npm/_logs/2019-06-12T16_09_41_408Z-debug.log
+2019-06-12T16:09:41.507985+00:00 heroku[web.1]: State changed from up to crashed
+2019-06-12T16:09:41.481420+00:00 heroku[web.1]: Process exited with status 1
+2019-06-12T16:09:41.400898+00:00 heroku[router]: at=error code=H13 desc="Connection closed without response" method=POST path="/login/valid" host=novelmanias.herokuapp.com request_id=502dd348-985b-487a-b505-378265003f61 fwd="177.92.42.194" dyno=web.1 connect=0ms service=216ms status=503 bytes=0 protocol=https
