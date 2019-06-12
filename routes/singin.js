@@ -41,7 +41,7 @@ router.post('/valid', (req, res) => {
                             if (err) throw err;
                             if (!err) {
                                 res.redirect('/login');
-                                res.cookie('NewUser', documento);
+                                
                                 client.close();
                             }
                         });
