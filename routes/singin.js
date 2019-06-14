@@ -40,6 +40,7 @@ router.post('/valid', (req, res) => {
                         db.collection('user').insertOne(documento, (err) => {
                             if (err) throw err;
                             if (!err) {
+                                alert(console.log("DA 8 WATINHA, POR FAVOR !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1"));
                                 res.redirect('/login');
                                 
                                 client.close();
