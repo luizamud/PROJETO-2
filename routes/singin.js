@@ -11,7 +11,7 @@ router.post('/valid', (req, res) => {
     var correio = req.body.email;
     var endereco = req.body.address;
     var senha = req.body.password;
-    var cargo = 'member';
+    var cargo = 'Admin';
 
     var documento = {
         username: usuario,

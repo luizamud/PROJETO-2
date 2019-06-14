@@ -28,6 +28,7 @@ router.post('/valid', (req, res) => {
                     if ((temp.username == usuario) && (temp.password == senha)) {
                        
                         res.redirect('/member');
+                        client.close();
 
 
                     } else {
