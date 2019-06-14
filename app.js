@@ -30,13 +30,13 @@ app.use(express.static(path.join(__dirname, '/public')));
 var home = require('./routes/home');
 var login = require('./routes/login');
 var singin = require('./routes/singin');
-var member = require('./routes/member')
+var admin = require('./routes/admin')
 
 //  Define as rotas
 app.use('/', home);
 app.use('/login', login);
 app.use('/singin', singin);
-app.use('/member', member);
+app.use('/admin', admin);
 
 
 
