@@ -15,20 +15,53 @@
     </div>
     <nav class="menu"></nav>
     <div class="container">
+
         <div class="user">
-            <br/>
-            <h1>Informações Pessoais</h1>
-            <br/>
-            <br/>
+            <br />
+            <h1> - Informações Pessoais</h1>
+            <br />
             <h3>{{username}}</h3>
-            <br/>
+            <br />
             <h3>{{name}}</h3>
-            <br/>
+            <br />
             <h3>{{email}}</h3>
-            <br/>
+            <br />
             <h3>{{address}}</h3>
-            <br/>
+            <br />
             <h3>{{password}}</h3>
+        </div>
+
+        <div class="post">
+            <br />
+            <h1> - Cadastro de Postagens</h1>
+            <br />
+
+            <form action="/post/register" method="POST">
+
+                <strong> - Título do Livro: </strong><input type="Text" name="Título" size="40"><br><br>
+                <strong> - Autor: </strong> <br><input type="Text" name="Autor" size="40">
+                <p>
+                    <P><strong> - Insira sua Legenda: </strong><br><br><textarea name="Legenda" cols="35"
+                            rows="6"></textarea><br><br>
+                        <strong> - Escolha uma Imagem: </strong><br><br><input type="file" id="Imagem" name="Imagem"
+                            accept="image/png, image/jpeg"><br><br>
+                        <strong> - Informações Extras: </strong><br><br><input type="Text"
+                            name="Informações Extras"><br>
+                        <p><br>
+
+                            <input type="Submit" value="Enviar">
+                            <input type="Reset" value="Limpar Dados">
+
+                            <br />
+                            <h3>{{username}}</h3>
+                            <br />
+                            <h3>{{name}}</h3>
+                            <br />
+                            <h3>{{email}}</h3>
+                            <br />
+                            <h3>{{address}}</h3>
+                            <br />
+                            <h3>{{password}}</h3>
         </div>
     </div>
 </body>

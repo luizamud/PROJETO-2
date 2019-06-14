@@ -38,6 +38,7 @@ body {
     background-image: url('/images/Logotipo-1-Site-Novel-Mania.png');
     background-repeat: no-repeat;
 }
+
 .menu {
     position: relative;
     float: left;
@@ -48,22 +49,38 @@ body {
     top: -18px;
     list-style-type: none;
 }
-.container{
+
+.container {
+    float: left;
     height: 600px;
-    width: 400px;
+    width: 900px;
     background-color: rgba(0, 0, 0, 0.76);
     margin-top: 80px;
     margin-left: 40px;
     padding: 50px;
 }
-.user{
+
+.user {
+    padding: 10px;
+    margin-right: 50px;
+    float: left;
     background-color: white;
     width: 400px;
     height: 600px;
 }
-h1{
-text-align: center;
+
+.post {
+    padding: 10px;
+    float: left;
+    background-color: white;
+    width: 400px;
+    height: 600px;
 }
-h3{
+
+h1 {
+    text-align: center;
+}
+
+h3 {
     text-align: center;
 }
