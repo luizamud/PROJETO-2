@@ -1,3 +1,10 @@
+/*******************************************************
+ *						       *
+ *          ESSE SEMESTRE VAI, EU ACREDITO 	       *
+ *						       *
+ *******************************************************
+ */
+
 var createError = require('http-errors');
 var express = require('express');
 var app = express();
